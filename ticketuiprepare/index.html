@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket UI Prepare</title>
+    <!-- custom css  -->
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+
+    <!-- jquery ui  -->
+    <link href="./libs/jquery-ui-1.13.2/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- tailwind css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+
+<!-- start header section  -->
+<section>
+    <div class="bg-cyan-700 flex justify-between p-4">
+        <div class="flex justify-center items-center">
+            <img src="https://www.shutterstock.com/image-vector/bus-ticket-icon-linear-vector-600nw-2270327237.jpg" class="w-16 h-16 rounded-full object-cover" alt="" />
+            <p class="ms-4 uppercase font-bold text-xl text-white">Bus Ticket</p>
+        </div>
+
+        <div class="p-4">
+            <ul class="flex">
+                <li class="mr-8 hover:text-white cursor:pointer text-slate-300"><a href="javascript:void(0);">Home</a></li>
+                <li class="mr-8 hover:text-white cursor:pointer text-slate-300"><a href="javascript:void(0);">Print Your Ticket</a></li>
+                <li class="mr-8 hover:text-white cursor:pointer text-slate-300"><a href="javascript:void(0);">Contact</a></li>
+                <li class="mr-8 hover:text-white cursor:pointer text-slate-300"><a href="javascript:void(0);" class="mr-2">English</a><i class="fas fa-caret-down"></i></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="h-screen flex justify-center  bg-zinc-300 bg-gradient-to-l from-zinc-300 to-cyan-700">
+        <div class=" w-[60%] mt-[8%] ms-[3%] p-7 space-y-5">
+           <p class="font-bold text-[50px] text-white uppercase">Book Online Bus Ticket Around Myanmar</p>
+           <p class="text-xl tracking-wide text-slate-300">The leading bus ticketing system in Myanmar. Find the best price for your bus tickets.</p>
+
+           <div class="flex mt-3">
+                <div class="bg-teal-900 p-3 text-white rounded-lg me-3 cursor-pointer hover:bg-teal-800"><span id="number">70+</span>Operators</div>
+                <div class="bg-teal-900 p-3 text-white rounded-lg me-3 cursor-pointer hover:bg-teal-800">Secure and Fast Payment</div>
+           </div>
+
+        </div>
+
+
+        <div class="w-[40%] mt-[8%] p-7">
+            
+            <div class="w-96 bg-slate-300 shadow-md rounded-sm p-3">
+                <form action="" method="">
+                    <p class="text-center text-lg font-bold text-teal-900 mb-2">Search Trip</p>
+                    <div class="dep">
+                        <select name="" id="" class="w-full p-3 rounded-md outline-0 focus:outline-none mb-2">
+                            <option selected disabled>From</option>
+                            <option value="">Yangon</option>
+                            <option value="">Mandalay</option>
+                            <option value="">Bago</option>
+                        </select>
+                    </div>
+
+                    <div class="arrive">
+                        <select name="" id="" class="w-full p-3 rounded-md outline-0 focus:outline-none mb-2">
+                            <option selected disabled>To</option>
+                            <option value="">Yangon</option>
+                            <option value="">Mandalay</option>
+                            <option value="">Bago</option>
+                        </select>
+                    </div>
+
+                    <div id="calendar" class="calendar">
+                        <input type="text" name="bookingdate" id="bookingdate" class="w-full p-2 px-4 rounded-md mb-2" value="2024/9/4" readonly />
+                    </div>
+
+                    <div class="seat bg-slate-100 flex justify-between items-center rounded-md p-3 mb-2">
+                        <i class="fas fa-minus cursor-pointer"></i>
+                        
+                        <p><span id="num">1</span> Seat</p>
+                
+                        <i class="fas fa-plus cursor-pointer"></i>
+                    </div>
+
+
+                    <div class="choicecitzen bg-slate-100 flex justify-center items-center rounded-lg p-3 mb-2">
+                       <div class="local me-3">
+                            <input type="radio" name="localcitizen" id="localcitizen" class="">
+                            <label for="localcitizen">Local Traveller</label>
+                       </div>
+
+                       <div class="foreign">
+                            <input type="radio" name="foreigncitizen" id="foreigncitizen" class="">
+                            <label for="foreigncitizen">Foreign Traveller</label>
+                        </div>
+                    </div>
+
+                    <button type="button" class="w-full bg-teal-900 text-white rounded-lg p-3 mb-2">Search Now</button>
+
+                </form>
+            </div>
+ 
+         </div>
+    </div>
+
+</section>
+<!-- end header section  -->
+    
+
+
+
+  
+    <!-- jquery  -->
+    <script src="./libs/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <!-- jquery ui  -->
+    <script src="./libs/jquery-ui-1.13.2/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script src="./app.js" type="text/javascript"></script>
+        
+</body>
+</html>
