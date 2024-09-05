@@ -74,8 +74,14 @@
                         </select>
                     </div>
 
-                    <div id="calendar" class="calendar">
-                        <input type="text" name="bookingdate" id="bookingdate" class="w-full p-2 px-4 rounded-md mb-2" value="2024/9/4" readonly />
+                    <div id="calendar" class="calendar flex relative">
+                        <!-- <input type="text" name="bookingdate" id="bookingdate" class="w-full p-2 px-4 rounded-md mb-2 outline-none cursor-pointer" value="2024/9/4" readonly /> -->
+
+                        <div id="bookingdate" class="w-full bg-slate-100 rounded-md outline-none cursor-pointer p-2 px-4 mb-2" >2024/8/9 </div>
+
+                        <div id="closebtn" class="cursor-pointer">
+                            <i class="fas fa-times absolute top-3 right-4 text-sm "></i>
+                        </div>
                     </div>
 
                     <div class="seat bg-slate-100 flex justify-between items-center rounded-md p-3 mb-2">
