@@ -57,7 +57,7 @@
                 <form action="" method="">
                     <p class="text-center text-lg font-bold text-teal-900 mb-2">Search Trip</p>
                     <div class="dep">
-                        <select name="" id="" class="w-full p-3 rounded-md outline-0 focus:outline-none mb-2">
+                        <select name="" id="" class="w-full p-3 rounded-md outline-0 focus:outline-none mb-2" required>
                             <option selected disabled>From</option>
                             <option value="">Yangon</option>
                             <option value="">Mandalay</option>
@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="arrive">
-                        <select name="" id="" class="w-full p-3 rounded-md outline-0 focus:outline-none mb-2">
+                        <select name="" id="" class="w-full p-3 rounded-md outline-0 focus:outline-none mb-2" required>
                             <option selected disabled>To</option>
                             <option value="">Yangon</option>
                             <option value="">Mandalay</option>
@@ -75,37 +75,27 @@
                     </div>
 
                     <div id="calendar" class="calendar flex relative">
-                        <!-- <input type="text" name="bookingdate" id="bookingdate" class="w-full p-2 px-4 rounded-md mb-2 outline-none cursor-pointer" value="2024/9/4" readonly /> -->
-
-                        <div id="bookingdate" class="w-full bg-slate-100 rounded-md outline-none cursor-pointer p-2 px-4 mb-2" >2024/8/9 </div>
-
-                        <div id="closebtn" class="cursor-pointer">
-                            <i class="fas fa-times absolute top-3 right-4 text-sm "></i>
-                        </div>
+                        <label for="bookingdate" id="deparature" class="absolute top-2 left-3 text-stone-600 cursor-pointer"><i class="fas fa-calendar mr-2"></i>Deparature Date</label>
+                        <input type="text" name="bookingdate" id="bookingdate" class="w-full p-2 px-4 rounded-md mb-2 outline-none cursor-pointer" readonly required />
                     </div>
 
                     <div class="seat bg-slate-100 flex justify-between items-center rounded-md p-3 mb-2">
-                        <i class="fas fa-minus cursor-pointer"></i>
-                        
-                        <p><span id="num">1</span> Seat</p>
+                        <button type="button" id="minus"><i class="fas fa-minus cursor-pointer"></i></button>
+                    
+                        <p id="num">0 Seat</p>
                 
-                        <i class="fas fa-plus cursor-pointer"></i>
+                        <button type="button" id="plus"><i class="fas fa-plus cursor-pointer"></i></button>
                     </div>
 
 
                     <div class="choicecitzen bg-slate-100 flex justify-center items-center rounded-lg p-3 mb-2">
-                       <div class="local me-3">
-                            <input type="radio" name="localcitizen" id="localcitizen" class="">
-                            <label for="localcitizen">Local Traveller</label>
-                       </div>
-
-                       <div class="foreign">
-                            <input type="radio" name="foreigncitizen" id="foreigncitizen" class="">
-                            <label for="foreigncitizen">Foreign Traveller</label>
-                        </div>
+                        <input type="radio" id="foreign" class="mx-2" name="traveller" value="foreign">
+                        <label for="foreign" class="mx-1">Foreign Traveller</label>
+                        <input type="radio" id="local" class="mx-2" name="traveller" value="local">
+                        <label for="local" class="mx-1">Local Traveller</label>
                     </div>
 
-                    <button type="button" class="w-full bg-teal-900 text-white rounded-lg p-3 mb-2">Search Now</button>
+                    <button type="submit" class="w-full bg-teal-900 text-white rounded-lg p-3 mb-2">Search Now</button>
 
                 </form>
             </div>
