@@ -24,6 +24,7 @@ $(document).ready(function(){
         });
     });
 
+
 });
 
 
@@ -78,6 +79,23 @@ getminus.addEventListener('click',function(){
 
 
 });
+
+const getuls = document.querySelector('.foruls');
+// console.log(getuls);
+
+function togglemenu(evl){
+    console.log(evl.target);
+
+    if(evl.target.classList.contains('toggleinputs')){
+        evl.target.classList.remove('toggleinputs');
+        getuls.classList.add('opacity-100');
+    }else{
+        evl.target.classList.add('toggleinputs');
+        getuls.classList.remove('opacity-100');
+
+    }
+}
+
 
 
 
