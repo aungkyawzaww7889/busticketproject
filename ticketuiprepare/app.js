@@ -96,6 +96,69 @@ function togglemenu(evl){
     }
 }
 
+const getleftbtn = document.getElementById('leftbtn');
+const getrightbtn = document.getElementById("rightbtn");
+const getlists = document.querySelectorAll('.lists');
+
+
+
+
+let imgaddress = ["photo1","photo2","photo3"];
+
+let i = 0;
+
+getleftbtn.addEventListener('click',function(){
+    // console.log("left"); 
+
+    i--;
+    if(i < 0){
+        i = imgaddress.length -1;
+        
+    }
+    // console.log(i);
+
+    document.querySelector('#shoimgs').src = `./images/${imgaddress[i]}.jpg`;
+    getlists.forEach(lists => lists.classList.remove('active'));
+    getlists[i].classList.add('active');
+});
+
+
+getrightbtn.addEventListener('click',function(){
+    // console.log("right"); 
+
+    i++;
+    if(i >= imgaddress.length){
+        i = 0;
+        
+    }
+    // console.log(i);
+
+    document.querySelector('#shoimgs').src = `./images/${imgaddress[i]}.jpg`;
+    getlists.forEach(lists => lists.classList.remove('active'));
+    getlists[i].classList.add('active');
+
+});
+
+
+// getlists.forEach(lists => lists.addEventListener('click',togglemenu));
+
+getlists.forEach(function(list){
+
+    list.addEventListener("click",function(){
+        // console.log(this);
+        // console.log(this.innerText);
+        // console.log(imgaddress[this.innerText-1]);
+
+
+        getlists.forEach(lists => lists.classList.remove('active'));
+        this.classList.add('active');
+
+        document.querySelector('#shoimgs').src = `./images/${imgaddress[this.innerText-1]}.jpg`;
+        
+    });
+
+
+});
 
 
 
